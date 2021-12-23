@@ -19,6 +19,7 @@ const Auction = ({ currency }) => {
   return (
     <div className={styles.container}>
       <div>
+        <h3>Pall 647, Josef Frank, Svenskt Tenn</h3>
         <img src={stool} className={styles.stool} alt="stool" />
         <h3>Beskrivning</h3>
         <p className={styles.textColor}>
@@ -31,14 +32,14 @@ const Auction = ({ currency }) => {
         <h3>Konstnär/Formgivare</h3>
         <p className={styles.textColor}>Josef Frank</p>
       </div>
-      <div>
+      <div className={styles.rightSide}>
         <div>
           <input onChange={(e) => setValue(e.target.value)} />
           <span className={styles.currencySpan}>{currency}</span>
           <button onClick={sendValue}>Lägg Bud</button>
         </div>
 
-        <h2>Budhistrik</h2>
+        <h2>Budhistorik</h2>
         <div className={styles.line}></div>
         <p></p>
       </div>
