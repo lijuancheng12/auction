@@ -29,7 +29,7 @@ currencies.forEach((currency) => {
   });
 });
 
-const convertCurrency = (currency, value) => {
+const convertCurrency = (value, currency) => {
   return exchangeRates[currency] * value;
 };
 
@@ -58,7 +58,7 @@ app.post("/", (req, res) => {
     if (err) {
       console.log(err);
     } else {
-      console.log(`Saved to database: {value} SEK`);
+      console.log(`Saved to database: ${value} SEK`);
     }
     res.send(result);
   });
