@@ -14,6 +14,7 @@ const Auction = ({ currency }) => {
         currency: currency,
       },
     });
+    setValue(" ");
   };
 
   return (
@@ -34,7 +35,7 @@ const Auction = ({ currency }) => {
       </div>
       <div className={styles.rightSide}>
         <div>
-          <input onChange={(e) => setValue(e.target.value)} />
+          <input value={value} onInput={(e) => setValue(e.target.value)} />
           <span className={styles.currencySpan}>{currency}</span>
           <button onClick={sendValue}>Lägg Bud</button>
         </div>
